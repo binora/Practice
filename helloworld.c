@@ -1,7 +1,8 @@
 #include<stdio.h>
 int main() {
 	printf("Hello World!\n");
-	printf("The sum is %d",add(1,2));
+	printf("The sum is %d\n",add(1,2));
+	printf("The diff is %d\n",subtract(2,1));
 	return 0;
 	
  }
@@ -9,4 +10,8 @@ int main() {
 int add(int a,int b)
 {
 	return (a+b);
+}
+int subtract(int a,int b)
+{
+	return (a-b);
 }
