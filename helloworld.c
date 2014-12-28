@@ -1,7 +1,8 @@
 #include<stdio.h>
 void slice(char *,int ,int);
+int fact(int);
 int main() {
-	int a=1,b=2;
+	int a=1,b=2,c;
 	int start,end;
 	char string[100],slicestr[100];
 	printf("Hello World!\n");
@@ -10,13 +11,16 @@ int main() {
 	printf("The diff is %d\n",sub(2,1));
 	printf("The multiplication is %d\n",multi(2,1));
 
-	printf("the division is %d", divide(a, b));
+	printf("the division is %d\n", divide(a, b));
 	printf("Enter the string \n");
 	scanf("%s",string);
 	printf("Enter the start and end number :\n");
 	scanf("%d %d",&start,&end);
 	slice(string,start,end);
 	printf("The original string is %s\n",string);
+	printf("Enter a number to calculate it's factorial\n ");
+	scanf("%d",&c);
+	printf("The Factorial of %d =%d\n",c,fact(c));
  
 
 	return 0;
@@ -63,4 +67,14 @@ void slice(char* string ,int start,int end)
 	slicestr[k]='\0';
 printf("The sliced string is %s\n",slicestr);
 
+}
+
+int fact(int c)
+{
+	int i,k=1;
+	for(i=1;i<=c;i++)
+	{
+		k=k*i;
+	}
+	return k;
 }
